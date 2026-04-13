@@ -3,13 +3,10 @@ const cors = require('cors');
 require('dotenv').config();
 
 const app = express();
-const PORT = process.env.PORT || 10000;
-const cors = require('cors');
+const PORT = process.env.PORT || 5000;
 
 // Middleware
-app.use(cors({origin: 'http://localhost:3000',
-                      'https://coffee-brand-lac.vercel.app',
-                      'https://*.vercel.app'}));
+app.use(cors());
 app.use(express.json());
 
 // Product data
